@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body class="min-h-screen flex flex-col bg-blue-600">
+    <header class="py-4">
+        <div class="px-4 lg:w-5/6 mx-auto">
+            <nav class="flex flex-col lg:flex-row items-center">
+                <span class="font-semibold text-white text-2xl mb-4 lg:text-4xl lg:mb-0">Jasmine Quiz Application</span>
+                <ul class="flex items-center lg:ml-auto space-x-4">
+                    <li class="text-white hover:text-gray-200 text-gray-200"><a href="/">Home</a></li>
+                    <li class="text-white hover:text-gray-200"><a href="about.html">About</a></li>
+                    <li class="text-white hover:text-gray-200"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="mt-auto flex flex-col items-center justify-center p-4">
+        <div class="card bg-white shadow-lg rounded-lg w-full md:w-5/6 lg:w-2/4">
+            <div class="card-header p-5 py-3 flex items-center shadow ">
+                <h1 class="mr-auto font-semibold" id="title">Pop Quiz</h1>
+                <span class="border-none bg-blue-200 rounded-md px-3 py-1.5 text-blue-600">Score
+                    <span class="bg-slate-800 rounded px-2 py-0.5 text-white" id="score">00/20</span></span>
+            </div>
+            <div class="card-body p-5">
+                <h1 id="question" class="font-bold"></h1>
+                <div class="mt-5" id="optionsContainer">
+                    <!-- <label for="optionOne" class="border bg-sky-50 border-sky-200 rounded-md px-3 py-1.5 flex items-center" id="labelOne">
+                        <input type="radio" name="q-one" value="python" class="mr-2" id="optionOne" data-value="option">
+                        Python 
+                    </label>
+                    <label for="optionTwo" class="border bg-sky-50 border-sky-200 rounded-md px-3 py-1.5 mt-3 flex items-center">
+                        <input type="radio" name="q-one" value="javascript" class="mr-2" id="optionTwo" data-value="option">
+                        JavaScript
+                        </label>
+                    <label for="optionThree" class="border bg-sky-50 border-sky-200 rounded-md px-3 py-1.5 mt-3 flex items-center">
+                        <input type="radio" name="q-one" value="javascript" class="mr-2" id="optionThree" data-value="option">
+                        C++
+                    </label> -->
+                </div>
+            </div>
+            <div class="card-bottom flex flex-wrap items-center p-5 mt-14">
+                <p class="font-semibold" id="questionCount"></p>
+                <div class="ml-auto flex items-center space-x-2">
+                    <button id="submitButton"
+                        class="border-none bg-green-600 rounded-md px-3 py-1.5 text-white">Submit</button>
+                    <button id="nextButton" class="border-none bg-blue-600 rounded-md px-3 py-1.5 text-white">Next
+                        Question</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-auto py-5 text-center text-slate-200">Jasmine Quiz Application &copy; 2023</footer>
+
+    <script src="./questions.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
